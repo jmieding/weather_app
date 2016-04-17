@@ -24,6 +24,6 @@
 
 window.onload = function() {
   var city = geoplugin_city();
-  document.getElementById('city').innerHTML = "city";
+  document.getElementById('city').innerHTML = city;
   alert("WAZZAP");
 }

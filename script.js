@@ -33,10 +33,10 @@ window.onload = function() {
   
   var json = JSON.parse(request.responseText);
   var temp = Math.round(json.main.temp);
-  document.getElementById('temp').innerHTML = temp;
+  document.getElementById('temp').innerHTML = temp + ' F';
   
-  // var iconId = json.weather[0].icon;
-  // document.getElementById('img').innerHTML = "<img src=\'http://openweathermap.org/img/w/\' + iconId + \'.png\'/>"
+  var iconId = json.weather[0].icon;
+  document.getElementById('img').innerHTML = "<img src=\'http://openweathermap.org/img/w/\' + iconId + \'.png\'/>"
 
   var weatherSummary = json.weather[0].description;
   document.getElementById('summary').innerHTML = weatherSummary;

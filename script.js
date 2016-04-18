@@ -36,8 +36,7 @@ window.onload = function() {
   document.getElementById('temp').innerHTML = temp;
   
   var iconId = json.weather[0].icon;
-  document.getElementById('img').innerHTML = "<img src=\'http://openweathermap.org/img/w/' + iconId + '.png\'/>"
-
+  document.getElementById('img').innerHTML = "<img src=\'http://openweathermap.org/img/w/\' + iconId + \'.png\'/>"
 
   var weatherSummary = json.weather[0].description;
   document.getElementById('summary').innerHTML = weatherSummary;

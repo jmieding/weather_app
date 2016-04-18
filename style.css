@@ -1,3 +1,6 @@
-/*body {
-  background-image: url("winter-20234.jpg");
-}*/
+body {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

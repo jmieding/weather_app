@@ -33,19 +33,19 @@ window.onload = function() {
   
   var json = JSON.parse(request.responseText);
   var temp = Math.round(json.main.temp);
-  document.getElementById('temp').innerHTML = temp;
+  getElementById('temp').innerHTML = temp;
   
   // var iconId = json.weather[0].icon;
   // document.getElementById('img').innerHTML = "<img src=\'http://openweathermap.org/img/w/\' + iconId + \'.png\'/>"
 
   var weatherSummary = json.weather[0].description;
-  document.getElementById('summary').innerHTML = weatherSummary;
+  getElementById('summary').innerHTML = weatherSummary;
 
   var windSpeed = json.wind.speed;
   var windDirection = json.wind.deg;
-  document.getElementById('wind').innerHTML = windSpeed + ', ' + windDirection + ' deg.';
+  getElementById('wind').innerHTML = windSpeed + ', ' + windDirection + ' deg.';
 
-  var body = document.getElementsByTagName('body')[0];
+  var body = getElementsByTagName('body')[0];
   if (temp >= 88) {
     body.style.backgroundImage = 'url(desert-1007157.jpg)';
   } else if (temp >= 67 && temp < 88) {

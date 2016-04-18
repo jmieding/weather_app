@@ -24,6 +24,37 @@
 
 window.onload = function() {
   var city = geoplugin_city();
-  document.getElementById('city').innerHTML = city;
-  alert("WAZZAP");
-}
+  var state = geoplugin_region();
+  document.getElementById('location').innerHTML = city, state;
+  
+  var request = new XMLHttpRequest();
+  request.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=8d3803d9f1c6b28d9f0d403ebd39fa45", false);
+  request.send();
+  
+  var json = JSON.parse(request.responseText);
+  var temp = Math.round(json.main.temp);
+  document.getElementById('temp').innerHTML = temp;
+  
+  var iconId = json.weather[0].icon;
+  document.getElementById('img').innerHTML = "<img src=\'http://openweathermap.org/img/w/' + iconId + '.png\'/>"
+
+
+  var weatherSummary = json.weather[0].description;
+  document.getElementById('summary').innerHTML = weatherSummary;
+
+  var windSpeed = json.wind.speed;
+  var windDirection = json.wind.deg;
+
+  var body = document.getElementsByTagName('body')[0];
+  if (temp >= 88) {
+    body.style.backgroundImage = 'url(desert-1007157.jpg)';
+  } else if (temp >= 67 && temp < 88) {
+    body.style.backgroundImage = 'url(beach-656734.jpg)';
+  } else if (temp >= 50 && temp < 67) {
+    body.style.backgroundImage = 'url(lake-65443.jpg)';
+  } else if (temp > 38 && temp < 50) {
+    body.style.backgroundImage = 'url(forest-605505.jpg)';
+  } else {
+    body.style.backgroundImage = 'url(winter-20234)';
+  }
+};

@@ -25,7 +25,7 @@
 window.onload = function() {
   var city = geoplugin_city();
   var state = geoplugin_region();
-  getElementById('location').innerHTML = city +', ' + state;
+  document.getElementById('location').innerHTML = city +', ' + state;
   
   var request = new XMLHttpRequest();
   request.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=8d3803d9f1c6b28d9f0d403ebd39fa45", false);

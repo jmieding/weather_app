@@ -35,8 +35,8 @@ window.onload = function() {
   var temp = Math.round(json.main.temp);
   document.getElementById('temp').innerHTML = temp;
   
-  var iconId = json.weather[0].icon;
-  document.getElementById('img').innerHTML = "<img src=\'http://openweathermap.org/img/w/\' + iconId + \'.png\'/>"
+  // var iconId = json.weather[0].icon;
+  // document.getElementById('img').innerHTML = "<img src=\'http://openweathermap.org/img/w/\' + iconId + \'.png\'/>"
 
   var weatherSummary = json.weather[0].description;
   document.getElementById('summary').innerHTML = weatherSummary;
@@ -45,16 +45,16 @@ window.onload = function() {
   var windDirection = json.wind.deg;
   document.getElementById('wind').innerHTML = windSpeed + ', ' + windDirection + ' deg.';
 
-  // var body = document.getElementsByTagName('body')[0];
-  // if (temp >= 88) {
-  //   body.style.backgroundImage = 'url(desert-1007157.jpg)';
-  // } else if (temp >= 67 && temp < 88) {
-  //   body.style.backgroundImage = 'url(beach-656734.jpg)';
-  // } else if (temp >= 50 && temp < 67) {
-  //   body.style.backgroundImage = 'url(lake-65443.jpg)';
-  // } else if (temp > 38 && temp < 50) {
-  //   body.style.backgroundImage = 'url(forest-605505.jpg)';
-  // } else {
-  //   body.style.backgroundImage = 'url(winter-20234)';
-  // }
+  var body = document.getElementsByTagName('body')[0];
+  if (temp >= 88) {
+    body.style.backgroundImage = 'url(desert-1007157.jpg)';
+  } else if (temp >= 67 && temp < 88) {
+    body.style.backgroundImage = 'url(beach-656734.jpg)';
+  } else if (temp >= 50 && temp < 67) {
+    body.style.backgroundImage = 'url(lake-65443.jpg)';
+  } else if (temp > 38 && temp < 50) {
+    body.style.backgroundImage = 'url(forest-605505.jpg)';
+  } else {
+    body.style.backgroundImage = 'url(winter-20234)';
+  }
 };

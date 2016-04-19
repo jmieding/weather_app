@@ -15,10 +15,13 @@ h3 {
   display: inline;
 }
 
-#location {
-  margin-left: 10%;
+#group1, #group2 {
+  text-align:center;
 }
 
-#summary, #wind  {
+#location, #summary, #wind  {
   display: inline;
+  padding: 10%;
+  border: black solid 1px;
+  background: rgba(100,100,100,.2);
 }

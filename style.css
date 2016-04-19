@@ -4,3 +4,21 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
+h3 {
+  text-align: center;
+  margin-top: 5%;
+}
+
+#img, #temp {
+  margin: 0 auto;
+  display: inline;
+}
+
+#location {
+  margin-left: 10%;
+}
+
+#summary, #wind  {
+  display: inline;
+}

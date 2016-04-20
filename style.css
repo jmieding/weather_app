@@ -20,6 +20,7 @@ body {
   margin-top: 8%;
   color:white;
   font-family:'Signika', arial;
+  font-size: 2em;
 }
 
 #group1 {
@@ -32,7 +33,7 @@ body {
 }
 
 #temp {
-  font-size: 2em;
+  font-size: 1.75em;
   font-family: arial;
   margin-left: 10px;
   padding: 10px;

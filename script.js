@@ -51,7 +51,7 @@ window.onload = function() {
   } else if (temp >= 67 && temp < 88) {
     body.style.backgroundImage = "url(\'beach-656734.jpg\')";
   } else if (temp >= 50 && temp < 67) {
-    body.style.backgroundImage = "url('lake-65443.jpg')";
+    body.style.backgroundImage = "url(\'lake-65443.jpg\')";
   } else if (temp > 38 && temp < 50) {
     body.style.backgroundImage = "url('forest-605505.jpg')";
   } else {

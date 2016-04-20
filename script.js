@@ -5,14 +5,14 @@ window.onload = function() {
   document.getElementById('location').innerHTML = city +', ' + state;
   
   // Download Openweather Data
-  var request = new XMLHttpRequest();
-  request.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=8d3803d9f1c6b28d9f0d403ebd39fa45", false);
-  request.send();
+  var requestCurrentWeather = new XMLHttpRequest();
+  requestCurrentWeather.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=8d3803d9f1c6b28d9f0d403ebd39fa45", false);
+  requestCurrentWeather.send();
   
-  var json = JSON.parse(request.responseText);
+  var json = JSON.parse(requestCurrentWeather.responseText);
   var temp = Math.round(json.main.temp);
   document.getElementById('temp').innerHTML = temp + ' F';
-  
+
   // Weather icon
   var iconId = json.weather[0].icon;
   document.getElementById('img').innerHTML = "<img src=http://openweathermap.org/img/w/" + iconId + ".png>";
@@ -45,6 +45,7 @@ window.onload = function() {
   document.getElementById('wind').innerHTML = windDirection + ' ' + windSpeed + 'mph';
 
   // Body background image changes with temperature
+  temp = 40;
   if (temp >= 88) {
     document.body.style.backgroundImage = "url('desert-1007157.jpg')";
   } else if (temp >= 67 && temp < 88) {
@@ -56,4 +57,9 @@ window.onload = function() {
   } else {
     document.body.style.backgroundImage = "url('winter-20234.jpg')";
   }
+
+  // Download Forecast Data
+  var requestForecast = new XMLHttpRequest();
+  requestForecast.open("GET", "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=8d3803d9f1c6b28d9f0d403ebd39fa45", false);
+  requestForecast.send();
 };

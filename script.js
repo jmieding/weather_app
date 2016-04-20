@@ -57,7 +57,8 @@ window.onload = function() {
   } else {
     document.body.style.backgroundImage = "url('winter-20234.jpg')";
     document.getElementById('temp').style.color = "black";
-    document.getElementsByTagName('h2').style.color = "black";
+    var h2 = document.getElementsByTagName('h2');
+    h2.style.color = "black";
   };
   // Download Forecast Data
   //var requestForecast = new XMLHttpRequest();

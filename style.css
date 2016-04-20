@@ -7,12 +7,12 @@ body {
 
 h3 {
   text-align: center;
-  margin-top: 5%;
+  margin-top: 8%;
 }
 
 #group1 {
   text-align:center;
-  margin-top: 15%;
+  margin-top: 10%;
 }
 
 #img, #temp {
@@ -30,7 +30,7 @@ h3 {
   padding: 20px;
   border: black solid 1px;
   border-radius: 5px;
-  background: rgba(100,100,100,.7);
+  background: rgba(300,300,300,.8);
 }
 
 #forecast {

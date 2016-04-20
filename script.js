@@ -1,32 +1,10 @@
-
-// 1) Automatic call to weather api returning location.
-
-// 2) Weather returns data for location.
-// -Temp
-// -Humidity
-// -Appx location
-// -5 day forecast?
-
-// 3) return background picture based on data
-
-// What cases do we need?
-
-// cold and clear = <45 cold
-// cold and rainy = <50 + rain = cold rain
-// V cold <50 = picture of snow
-// V moderate = 50 - 65 fall trees
-// V warm and sunny = 66 - 88 beach
-// V hot and sunny = >88 desert
-
-// 4) make it all look pretty
-
-
-
 window.onload = function() {
+  // Geolocate by IP. Script called in home.html
   var city = geoplugin_city();
   var state = geoplugin_region();
   document.getElementById('location').innerHTML = city +', ' + state;
   
+  // Download Openweather Data
   var request = new XMLHttpRequest();
   request.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=8d3803d9f1c6b28d9f0d403ebd39fa45", false);
   request.send();
@@ -35,12 +13,15 @@ window.onload = function() {
   var temp = Math.round(json.main.temp);
   document.getElementById('temp').innerHTML = temp + ' F';
   
+  // Weather icon
   var iconId = json.weather[0].icon;
   document.getElementById('img').innerHTML = "<img src=http://openweathermap.org/img/w/" + iconId + ".png>";
 
+  // Status
   var weatherSummary = json.weather[0].description;
   document.getElementById('summary').innerHTML = weatherSummary;
 
+  // Windspeed and direction
   var windSpeed = json.wind.speed;
   var windDirectionDegrees = json.wind.deg;
   var windDirection;
@@ -63,11 +44,12 @@ window.onload = function() {
   };
   document.getElementById('wind').innerHTML = windDirection + ' ' + windSpeed + 'mph';
 
+  // Body background image changes with temperature
   var body = document.getElementsByTagName('body');
   if (temp >= 88) {
     body.style.backgroundImage = "url('desert-1007157.jpg')";
   } else if (temp >= 67 && temp < 88) {
-    body.style.backgroundImage = "url('beach-656734.jpg')";
+    body.style.backgroundImage = "url(\'beach-656734.jpg\')";
   } else if (temp >= 50 && temp < 67) {
     body.style.backgroundImage = "url('lake-65443.jpg')";
   } else if (temp > 38 && temp < 50) {

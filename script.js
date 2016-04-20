@@ -58,8 +58,9 @@ window.onload = function() {
      windDirection = "SW";
   } else if (windDirectionDegrees >= 248 && windDirectionDegrees < 292) {
      windDirection = "W";
-  } else if (windDirectionDegrees >= 292 && windDirectionDegrees < 338) {
+  } else {
      windDirection = "NW";
+  };
   document.getElementById('wind').innerHTML = windDirection + ' ' + windSpeed + 'mph';
 
   var body = document.getElementsByTagName('body');

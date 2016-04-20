@@ -45,7 +45,6 @@ window.onload = function() {
   document.getElementById('wind').innerHTML = windDirection + ' ' + windSpeed + 'mph';
 
   // Body background image changes with temperature
-  var body = document.getElementsByTagName('body');
   if (temp >= 88) {
     document.body.style.backgroundImage = "url('desert-1007157.jpg')";
   } else if (temp >= 67 && temp < 88) {

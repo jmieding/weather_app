@@ -14,11 +14,13 @@ h2 {
 #group1 {
   text-align:center;
   margin-top: 10%;
+  background: rgba(200,200,200,.8);
 }
 
 #img, #temp {
   margin: 0 auto;
   display: inline;
+  font-weight: bold;
 }
 
 #temp {

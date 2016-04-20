@@ -1,14 +1,26 @@
 body {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  min-height: 100%;
 }
 
-h3 {
+h2 {
   text-align: center;
   margin-top: 8%;
   font-style: arial;
+}
+
+#img-background {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 #group1 {
@@ -33,11 +45,16 @@ h3 {
 
 #location, #summary, #wind  {
   display: inline;
-  padding: 20px;
+  padding: 1%;
   border: black solid 1px;
   border-radius: 5px;
   background: rgba(200,200,200,.8);
   font-size: 1em;
+}
+
+#summary {
+  margin-left:1%;
+  margin-right:1%;
 }
 
 #forecast {

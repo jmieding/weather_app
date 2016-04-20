@@ -3,7 +3,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-image:url('desert-1007157.jpg');
 }
 
 @media (max-width: 992px) {
@@ -25,7 +24,7 @@ h2 {
 
 #group1 {
   text-align:center;
-  margin-top: 10%;
+  margin-top: 9%;
 }
 
 #img, #temp {
@@ -43,7 +42,7 @@ h2 {
 
 #group2 {
   text-align:center;
-  margin-top: 3%;
+  margin-top: 4%;
 }
 
 #location, #summary, #wind {

@@ -18,7 +18,7 @@ h2 {
   text-align: center;
   margin-top: 8%;
   font-family: arial;
-  color: #FAFAD2;
+  color:white;
 }
 
 #group1 {
@@ -35,7 +35,7 @@ h2 {
   font-family: arial;
   margin-left: 10px;
   padding: 10px;
-  color:#FAFAD2;
+  color:white;
   font-weight: bold;
 }
 
@@ -66,5 +66,5 @@ h2 {
 
 a {
   margin-bottom: 10px;
-  background: rgb(200,200,200);
+  position: absolute;
 }

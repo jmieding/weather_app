@@ -43,18 +43,18 @@ window.onload = function() {
 
   var windSpeed = json.wind.speed;
   var windDirection = json.wind.deg;
-  document.getElementById('wind').innerHTML = windSpeed + 'mph. |' + windDirection + ' deg.';
+  document.getElementById('wind').innerHTML = windSpeed + 'mph. - ' + windDirection + ' deg.';
 
   var body = document.getElementsByTagName('body')[0];
   if (temp >= 88) {
-    body.style.background = "url('desert-1007157.jpg') no-repeat center center fixed";
+    body.style.background = "url('desert-1007157.jpg') no-repeat center center";
   } else if (temp >= 67 && temp < 88) {
-    body.style.background = "url('beach-656734.jpg') no-repeat center center fixed";
+    body.style.background = "url('beach-656734.jpg') no-repeat center center";
   } else if (temp >= 50 && temp < 67) {
-    body.style.background = "url('lake-65443.jpg') no-repeat center center fixed";
+    body.style.background = "url('lake-65443.jpg') no-repeat center center";
   } else if (temp > 38 && temp < 50) {
-    body.style.background = "url('forest-605505.jpg') no-repeat center center fixed";
+    body.style.background = "url('forest-605505.jpg') no-repeat center center";
   } else {
-    body.style.background = "url('winter-20234.jpg') no-repeat center center fixed";
+    body.style.background = "url('winter-20234.jpg') no-repeat center center";
   }
 };

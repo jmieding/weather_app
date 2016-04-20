@@ -12,7 +12,7 @@ h3 {
 
 #group1 {
   text-align:center;
-  margin-top: 10%;
+  margin-top: 15%;
 }
 
 #img, #temp {
@@ -22,7 +22,7 @@ h3 {
 
 #group2 {
   text-align:center;
-  margin-top: 10%;
+  margin-top: 3%;
 }
 
 #location, #summary, #wind  {
@@ -30,5 +30,10 @@ h3 {
   padding: 20px;
   border: black solid 1px;
   border-radius: 5px;
-  background: rgba(100,100,100,.5);
+  background: rgba(100,100,100,.7);
+}
+
+#forecast {
+  text-align:center;
+  margin-top: 5%;
 }

@@ -8,6 +8,7 @@ body {
 h3 {
   text-align: center;
   margin-top: 8%;
+  font-style: arial;
 }
 
 #group1 {
@@ -18,6 +19,11 @@ h3 {
 #img, #temp {
   margin: 0 auto;
   display: inline;
+}
+
+#temp {
+  font-size: 2em;
+  margin-left: 10px;
 }
 
 #group2 {
@@ -31,6 +37,7 @@ h3 {
   border: black solid 1px;
   border-radius: 5px;
   background: rgba(200,200,200,.8);
+  font-size: 1em;
 }
 
 #forecast {

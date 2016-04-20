@@ -15,11 +15,11 @@ body {
   }
 }
 
-h2 {
+#header {
   text-align: center;
   margin-top: 8%;
-  font-family: arial;
   color:white;
+  font-family:'Signika', arial;
 }
 
 #group1 {

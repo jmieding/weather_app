@@ -17,7 +17,7 @@ body {
 h2 {
   text-align: center;
   margin-top: 8%;
-  font-style: arial;
+  font-family: arial;
 }
 
 #group1 {
@@ -26,16 +26,15 @@ h2 {
 }
 
 #img, #temp {
-  margin: 0 auto;
   display: inline;
-  font-weight: bold;
-  border-radius: 5px;
-  background: rgba(200,200,200,.8);
 }
 
 #temp {
   font-size: 2em;
+  font-family: arial;
   margin-left: 10px;
+  padding: 10px;
+  font-color: white;
 }
 
 #group2 {

@@ -42,14 +42,31 @@ window.onload = function() {
   document.getElementById('summary').innerHTML = weatherSummary;
 
   var windSpeed = json.wind.speed;
-  var windDirection = json.wind.deg;
-  document.getElementById('wind').innerHTML = windSpeed + 'mph. - ' + windDirection + ' deg.';
+  var windDirectionDegrees = json.wind.deg;
+  var windDirection;
+  if (windDirectionDegrees > 338 | windDirectionDegrees < 22) {
+    windDirection = "N";
+  } else if (windDirectionDegrees >= 22 && windDirectionDegrees < 68) {
+     windDirection = "NE";
+  } else if (windDirectionDegrees >= 68 && windDirectionDegrees < 112) {
+     windDirection = "E";
+  } else if (windDirectionDegrees >= 112 && windDirectionDegrees < 158) {
+     windDirection = "SE";
+  } else if (windDirectionDegrees >= 158 && windDirectionDegrees < 202) {
+     windDirection = "S";
+  } else if (windDirectionDegrees >= 202 && windDirectionDegrees < 248) {
+     windDirection = "SW";
+  } else if (windDirectionDegrees >= 248 && windDirectionDegrees < 292) {
+     windDirection = "W";
+  } else if (windDirectionDegrees >= 292 && windDirectionDegrees < 338) {
+     windDirection = "NW";
+  document.getElementById('wind').innerHTML = windDirection + ' ' + windSpeed + 'mph';
 
   var body = document.getElementsByTagName('body');
   if (temp >= 88) {
     body.style.backgroundImage = "url('desert-1007157.jpg')";
   } else if (temp >= 67 && temp < 88) {
-    body.style.backgroundImage = "url(beach-656734.jpg)";
+    body.style.backgroundImage = "url('beach-656734.jpg')";
   } else if (temp >= 50 && temp < 67) {
     body.style.backgroundImage = "url('lake-65443.jpg')";
   } else if (temp > 38 && temp < 50) {

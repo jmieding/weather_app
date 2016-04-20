@@ -3,6 +3,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-image:url('desert-1007157.jpg');
 }
 
 @media (max-width: 992px) {
@@ -11,7 +12,7 @@ body {
     -moz-background-size: auto;
     -o-background-size: auto;
     background-size: auto;
-    background-position: center fixed;
+    background-position: center;
   }
 }
 

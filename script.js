@@ -56,6 +56,9 @@ window.onload = function() {
     document.body.style.backgroundImage = "url('forest-605505.jpg')";
   } else {
     document.body.style.backgroundImage = "url('winter-20234.jpg')";
+  };
+
+  if (temp >= 88 || temp <= 38) {
     document.getElementById('temp').style.color = "black";
     document.getElementById('header').style.color = "black";
   };

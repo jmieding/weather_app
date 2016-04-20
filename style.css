@@ -10,14 +10,19 @@ h3 {
   margin-top: 5%;
 }
 
+#group1 {
+  text-align:center;
+  margin-top: 10%;
+}
+
 #img, #temp {
   margin: 0 auto;
   display: inline;
 }
 
-#group1, #group2 {
+#group2 {
   text-align:center;
-  margin-top: 30%;
+  margin-top: 10%;
 }
 
 #location, #summary, #wind  {

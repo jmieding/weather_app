@@ -45,7 +45,7 @@ window.onload = function() {
   var windDirection = json.wind.deg;
   document.getElementById('wind').innerHTML = windSpeed + 'mph. - ' + windDirection + ' deg.';
 
-  var body = document.getElementById('img-background')[0];
+  var body = document.getElementById('img-background');
   if (temp >= 88) {
     body.style.backgroundImage = "url('desert-1007157.jpg')";
   } else if (temp >= 67 && temp < 88) {

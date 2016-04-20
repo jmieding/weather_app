@@ -1,20 +1,14 @@
-/*body {
-  min-height: 100%;
-}*/
+body {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 h2 {
   text-align: center;
   margin-top: 8%;
   font-style: arial;
-}
-
-#img-background {
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-
-  min-width: 100%;
-  min-height: 100%;
 }
 
 #group1 {

@@ -50,6 +50,8 @@ window.onload = function() {
     document.getElementById('temp').style.color = "black";
   } else if (temp >= 67 && temp < 88) {
     document.body.style.backgroundImage = "url('beach-656734.jpg')";
+    document.getElementById('temp').style.color = "black";
+    document.getElementById('header').style.color = "black";
   } else if (temp >= 50 && temp < 67) {
     document.body.style.backgroundImage = "url('lake-65443.jpg')";
   } else if (temp > 38 && temp < 50) {
@@ -59,7 +61,7 @@ window.onload = function() {
     document.getElementById('temp').style.color = "black";
     document.getElementById('header').style.color = "black";
   };
-  
+
   // Download Forecast Data
   //var requestForecast = new XMLHttpRequest();
   //requestForecast.open("GET", "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=8d3803d9f1c6b28d9f0d403ebd39fa45", false);

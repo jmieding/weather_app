@@ -45,9 +45,9 @@ window.onload = function() {
   document.getElementById('wind').innerHTML = windDirection + ' ' + windSpeed + 'mph';
 
   // Body background image changes with temperature
-  temp = 100;
   if (temp >= 88) {
     document.body.style.backgroundImage = "url('desert-1007157.jpg')";
+    document.getElementById('temp').style.color = "black";
   } else if (temp >= 67 && temp < 88) {
     document.body.style.backgroundImage = "url('beach-656734.jpg')";
   } else if (temp >= 50 && temp < 67) {
@@ -56,12 +56,10 @@ window.onload = function() {
     document.body.style.backgroundImage = "url('forest-605505.jpg')";
   } else {
     document.body.style.backgroundImage = "url('winter-20234.jpg')";
-  };
-
-  if (temp >= 88 || temp <= 38) {
     document.getElementById('temp').style.color = "black";
     document.getElementById('header').style.color = "black";
   };
+  
   // Download Forecast Data
   //var requestForecast = new XMLHttpRequest();
   //requestForecast.open("GET", "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=8d3803d9f1c6b28d9f0d403ebd39fa45", false);

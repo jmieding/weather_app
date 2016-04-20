@@ -11,6 +11,7 @@ body {
     -moz-background-size: auto;
     -o-background-size: auto;
     background-size: auto;
+    background-position: center fixed;
   }
 }
 
@@ -66,5 +67,5 @@ h2 {
 
 #geo {
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
 }

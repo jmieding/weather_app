@@ -36,7 +36,7 @@ window.onload = function() {
   document.getElementById('temp').innerHTML = temp + ' F';
   
   var iconId = json.weather[0].icon;
-  document.getElementById('img').innerHTML = "<img src=http://openweathermap.org/img/w/" + iconId + ".png/>";
+  document.getElementById('img').innerHTML = "<img src=http://openweathermap.org/img/w/01d.png>";
 
   var weatherSummary = json.weather[0].description;
   document.getElementById('summary').innerHTML = weatherSummary;
@@ -45,7 +45,7 @@ window.onload = function() {
   var windDirection = json.wind.deg;
   document.getElementById('wind').innerHTML = windSpeed + 'mph. - ' + windDirection + ' deg.';
 
-  var body = document.getElementsByTagName('background');
+  var body = document.getElementsByTagName('body');
   if (temp >= 88) {
     body.style.backgroundImage = "url('desert-1007157.jpg')";
   } else if (temp >= 67 && temp < 88) {

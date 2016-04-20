@@ -47,14 +47,14 @@ window.onload = function() {
 
   var body = document.getElementsByTagName('body')[0];
   if (temp >= 88) {
-    body.style.background = "url('desert-1007157.jpg') no-repeat";
+    body.style.background = "url('desert-1007157.jpg')";
   } else if (temp >= 67 && temp < 88) {
-    body.style.background = "url('beach-656734.jpg') no-repeat";
+    body.style.background = "url('beach-656734.jpg')";
   } else if (temp >= 50 && temp < 67) {
-    body.style.background = "url('lake-65443.jpg') no-repeat";
+    body.style.background = "url('lake-65443.jpg')";
   } else if (temp > 38 && temp < 50) {
-    body.style.background = "url('forest-605505.jpg') no-repeat";
+    body.style.background = "url('forest-605505.jpg')";
   } else {
-    body.style.background = "url('winter-20234.jpg') no-repeat";
+    body.style.background = "url('winter-20234.jpg')";
   }
 };
